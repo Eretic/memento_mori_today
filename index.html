@@ -90,10 +90,10 @@ $.each(clues,function(index){
     var direction = get_direction(index+1);
     
     if(direction == "horizontal"){
-        $(horizontal_hints).append('<div class="hint"><b>'+(index+1)+'</b>.-'+clues[index]+'</hint>');
+        $(horizontal_hints).append('<div class="hint"><b>'+(index+1)+'</b>. '+clues[index]+'</hint>');
     }
     else if(direction == "vertical"){
-    	$(vertical_hints).append('<div class="hint"><b>'+(index+1)+'</b>.-'+clues[index]+'</hint>');
+    	$(vertical_hints).append('<div class="hint"><b>'+(index+1)+'</b>. '+clues[index]+'</hint>');
     }
 });
 $("#vertical_hints_container").append(vertical_hints);
