@@ -248,7 +248,7 @@ function checkAnswer(question_number){
     
     if(direction == "horizontal"){
         for(var i = 0; i < answer_letters.length; i++){
-            if($("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").text() != question_answer[i]){
+            if($("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").text().toLowerCase() != question_answer[i]){
                 $("#puzzle tr:nth-child("+(startpos[0]+1)+") td:nth-child("+(startpos[1]+1+i)+") div").css("color","red");
                 result = false;
             }
@@ -257,7 +257,7 @@ function checkAnswer(question_number){
     }
     else if(direction == "vertical"){
         for(var i = 0; i < answer_letters.length; i++){
-            if($("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").text() != question_answer[i]){
+            if($("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").text().toLowerCase() != question_answer[i]){
                 $("#puzzle tr:nth-child("+(startpos[1]+1+i)+") td:nth-child("+(startpos[0]+1)+") div").css("color","red");
                 result = false;
             }
